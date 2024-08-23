@@ -1,6 +1,7 @@
 # coding: UTF-8
 import os
 import pickle as pkl
+import time
 import traceback
 from functools import lru_cache
 from importlib import import_module
@@ -207,13 +208,16 @@ CORS(app)  # 允许跨域访问
 @app.route('/predict', methods=['GET'])
 def predict():
     try:
+        start_time = time.time()
         keyword = request.args.get('keyword', '')
 
         if not keyword:
             return jsonify({'error': 'Keyword is missing.'}), 400
 
         result = classifier.classify(keyword)
+        end_time = time.time()
 
+        print(f"执行时间: {end_time - start_time:.6f} 秒")
         return jsonify(result), 200
 
     except Exception as e:
