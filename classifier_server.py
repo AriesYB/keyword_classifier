@@ -2,7 +2,6 @@
 import os
 import pickle as pkl
 import time
-import traceback
 from functools import lru_cache
 from importlib import import_module
 
@@ -209,7 +208,7 @@ CORS(app)  # 允许跨域访问
 def predict():
     try:
         start_time = time.time()
-        keyword = request.args.get('keyword', '')
+        keyword = request.args.get('keyword', '').replace(' ', '')
 
         if not keyword:
             return jsonify({'error': 'Keyword is missing.'}), 400
