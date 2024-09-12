@@ -18,6 +18,11 @@ Windows 命令: `venv\bin\activate.bat`
 
 `pip install -r requirements.txt`
 
+
+>cpu 版本的pytorch `pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cpu`
+
+>gpu 版本的pytorch `pip install torch==2.4.0+cu121 -f https://download.pytorch.org/whl/cu121/torch_stable.html`
+
 ## 二、使用 
 1.启动 server
 

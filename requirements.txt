@@ -20,7 +20,6 @@ setuptools==73.0.1
 sympy==1.13.2
 tensorboardX==2.6.2.2
 threadpoolctl==3.5.0
-torch==2.4.0
 tqdm==4.66.5
 typing_extensions==4.12.2
 Werkzeug==3.0.3
