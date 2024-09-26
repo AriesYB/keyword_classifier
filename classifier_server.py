@@ -230,6 +230,11 @@ if __name__ == '__main__':
     word = False
     dataset = 'goods'  # 数据集目录
 
+    # 获取当前脚本的绝对路径
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # 构建数据文件的完整路径
+    dataset = os.path.join(script_dir, dataset)
+
     # fastText的embedding方式不一样
     if model_name == 'FastText':
         from utils_fasttext import build_vocab, MAX_VOCAB_SIZE, DatasetIterater
