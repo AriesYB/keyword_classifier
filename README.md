@@ -1,5 +1,7 @@
 # 品目分类器
 
+此项目只推理，[训练项目](https://github.com/AriesYB/Chinese-Text-Classification-Pytorch.git)
+
 ## 一、配置环境
 
 Python 版本`3.12.4`
